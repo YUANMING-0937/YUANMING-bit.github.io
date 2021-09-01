@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yuanming-bit.github.io</id>
     <title>渊明</title>
-    <updated>2021-09-01T02:50:53.919Z</updated>
+    <updated>2021-09-01T02:52:27.153Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yuanming-bit.github.io"/>
     <link rel="self" href="https://yuanming-bit.github.io/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2021, 渊明</rights>
     <entry>
         <title type="html"><![CDATA[Python/GIL锁  进程线程]]></title>
-        <id>https://yuanming-bit.github.io/post/mian-shi-gil-suo-jin-cheng-xian-cheng/</id>
-        <link href="https://yuanming-bit.github.io/post/mian-shi-gil-suo-jin-cheng-xian-cheng/">
+        <id>https://yuanming-bit.github.io/post/gil-jin-xian-cheng/</id>
+        <link href="https://yuanming-bit.github.io/post/gil-jin-xian-cheng/">
         </link>
         <updated>2021-09-01T00:30:27.000Z</updated>
         <content type="html"><![CDATA[<p>在讲GIL锁之前先聊一下进程线程之间的关系</p>
