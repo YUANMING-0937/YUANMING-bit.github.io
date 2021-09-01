@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>TCP/IP协议  三次握手与四次挥手 | 渊明</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://yuanming-bit.github.io/favicon.ico?v=1630464554948">
+<link rel="stylesheet" href="https://yuanming-bit.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="在三次握手与四次挥手之前还是需要对TCP报文有些基本认知：
+
+三次握手是指客户端携带请求请求建立连接码和序列号（SYN，seq）向服务器端发送一次请求，若服务器端成功接受请求后返回确认请求码和确认号（ACK，ack）只表明从客户端到服务器端..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://yuanming-bit.github.io">
+        <img src="https://yuanming-bit.github.io/images/avatar.png?v=1630464554948" class="site-logo">
+        <h1 class="site-title">渊明</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      总是在安静的时候想得很多然后难受很久 。 
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://yuanming-bit.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">TCP/IP协议  三次握手与四次挥手</h2>
+            <div class="post-date">2021-08-31</div>
+            
+            <div class="post-content" v-pre>
+              <p>在三次握手与四次挥手之前还是需要对TCP报文有些基本认知：<br>
+<img src="https://yuanming-bit.github.io/post-images/1630399809209.png" alt="" loading="lazy"></p>
+<p>三次握手是指客户端携带请求<strong>请求建立连接码</strong>和<strong>序列号</strong>（SYN，seq）向服务器端发送一次请求，若服务器端成功接受请求后返回<strong>确认请求码</strong>和<strong>确认号</strong>（ACK，ack）只表明从客户端到服务器端发送数据没有问题，不确定服务器向客户端发送数据是否正常。在返回数据的过程中也添加<strong>建立连接码</strong>和<strong>序列号</strong>（SYN，seq）服务器端成功接收客户端返回的<strong>确认请求码</strong>和<strong>确认号</strong>（ACK，ack）后才表明双向连接的成功连通。</p>
+<figure data-type="image" tabindex="1"><img src="https://yuanming-bit.github.io/post-images/1630401100235.png" alt="" loading="lazy"></figure>
+<p>四次挥手是指客户端携带<strong>请求断开连接码</strong>和<strong>序列号</strong>（FIN，seq）向服务器端发送断开请求，服务器端成功接受请求后返回<strong>确认请求码</strong>和<strong>确认号</strong>（ACK，ack）表明从客户端到服务器端已经准备好了可以断开，但是客户端无法确定服务器到客户端是否还有数据传输未完成。服务端也需要向客户端发送<strong>请求断开连接码</strong>和<strong>序列号</strong>（FIN，seq）请求断开连接，服务器端成功接收客户端返回的<strong>确认请求码</strong>和<strong>确认号</strong>（ACK，ack）后才完成连接的断开。</p>
+<figure data-type="image" tabindex="2"><img src="https://yuanming-bit.github.io/post-images/1630402359642.png" alt="" loading="lazy"></figure>
+<p>文末附跟学习视频：https://www.bilibili.com/video/BV1bi4y1x7m5 理解鉴于视频观点 。</p>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://yuanming-bit.github.io/post/hello-gridea/">
+                  <h3 class="post-title">
+                    Hello Gridea
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
